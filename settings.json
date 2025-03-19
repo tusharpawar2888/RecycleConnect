@@ -1,0 +1,33 @@
+{
+    "zencoder.enableRepoIndexing": true,
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "pawar",
+            "username": "pawar",
+            "database": "pawar"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "xprotocol",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 33060,
+            "driver": "MySQL",
+            "name": "MySQL Local",
+            "database": "recycleconnect",
+            "username": "root",
+            "password": "pawar",
+            "connectionTimeout": 30
+        }
+    ]
+}
