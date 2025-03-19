@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community - Rio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/community.css">
+</head>
+<body>
+    <header class="header">
+        <div class="main-header">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-recycle"></i>
+                    <h1>RecycleConnect</h1>
+                </a>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="Marketplace.html">Marketplace</a></li>
+                        <li><a href="community.html" class="active">Community</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="user-actions">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="auth-buttons">
+                        <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+                        <button class="signup-btn" onclick="window.location.href='signup.html'">Sign Up</button>
+                    </div>
+                    <div class="user-section">
+                        <div class="user-status">
+                            <i class="fas fa-user-circle"></i>
+                            <span id="userEmail"></span>
+                        </div>
+                        <button class="logout-btn" onclick="handleLogout()">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="community-container">
+        <section class="community-hero">
+            <h1>Join Our Community</h1>
+            <p>Connect, collaborate, and grow with fellow developers in the Rio community.</p>
+        </section>
+
+        <section class="community-features">
+            <div class="feature-card">
+                <h3>Discussion Forums</h3>
+                <p>Engage in technical discussions, share knowledge, and get help from the community.</p>
+                <a href="#forums" class="feature-link">Browse Forums</a>
+            </div>
+
+            <div class="feature-card">
+                <h3>Events & Meetups</h3>
+                <p>Join virtual and in-person events to network and learn from other developers.</p>
+                <a href="#events" class="feature-link">View Events</a>
+            </div>
+
+            <div class="feature-card">
+                <h3>User Groups</h3>
+                <p>Find and join groups based on your interests, location, or expertise.</p>
+                <a href="#groups" class="feature-link">Explore Groups</a>
+            </div>
+        </section>
+
+        <section class="community-resources">
+            <h2>Community Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-item">
+                    <h4>Documentation</h4>
+                    <p>Access comprehensive guides and documentation.</p>
+                    <a href="#docs">Learn More</a>
+                </div>
+                <div class="resource-item">
+                    <h4>Blog</h4>
+                    <p>Read the latest updates and technical articles.</p>
+                    <a href="#blog">View Posts</a>
+                </div>
+                <div class="resource-item">
+                    <h4>Support</h4>
+                    <p>Get help from our dedicated support team.</p>
+                    <a href="#support">Get Help</a>
+                </div>
+                <div class="resource-item">
+                    <h4>Contributors</h4>
+                    <p>See who's helping build Rio.</p>
+                    <a href="#contributors">View Contributors</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="join-community">
+            <h2>Ready to Join?</h2>
+            <p>Become part of our growing community and start contributing today.</p>
+            <div class="cta-buttons">
+                <a href="signup.html" class="primary-btn">Sign Up Now</a>
+                <a href="#learn-more" class="secondary-btn">Learn More</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Rio</h4>
+                <p>Building the future of development together.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#twitter">Twitter</a></li>
+                    <li><a href="#github">GitHub</a></li>
+                    <li><a href="#discord">Discord</a></li>
+                    <li><a href="#linkedin">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Rio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+    function handleLogout() {
+        fetch('http://localhost:5000/api/logout', {
+            method: 'GET',
+            credentials: 'include'
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Clear any stored session/local storage data
+            localStorage.removeItem('user');
+            sessionStorage.removeItem('user');
+            
+            // Update UI to show logged out state
+            document.body.classList.remove('logged-in');
+            document.querySelector('.user-section').style.display = 'none';
+            document.querySelector('.auth-buttons').style.display = 'flex';
+            
+            window.location.href = 'login.html';
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error logging out. Please try again.');
+        });
+    }
+
+    // Check login status on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (user) {
+            document.body.classList.add('logged-in');
+            document.getElementById('userEmail').textContent = user.email;
+            document.querySelector('.user-section').style.display = 'flex';
+            document.querySelector('.auth-buttons').style.display = 'none';
+        } else {
+            document.querySelector('.user-section').style.display = 'none';
+            document.querySelector('.auth-buttons').style.display = 'flex';
+        }
+    });
+    </script>
+</body>
+</html>

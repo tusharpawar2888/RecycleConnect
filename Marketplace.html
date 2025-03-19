@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycling Marketplace - RecycleConnect</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="marketplace.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="main-header">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-recycle"></i>
+                    <h1>RecycleConnect</h1>
+                </a>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="Marketplace.html" class="active">Marketplace</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="user-actions">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="auth-buttons">
+                        <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+                        <button class="signup-btn" onclick="window.location.href='signup.html'">Sign Up</button>
+                    </div>
+                    <div class="user-section">
+                        <div class="user-status">
+                            <i class="fas fa-user-circle"></i>
+                            <span id="userEmail"></span>
+                        </div>
+                        <button class="logout-btn" onclick="handleLogout()">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header><br><br><br><br>
+    <!-- Marketplace Hero -->
+    <section class="marketplace-hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Recycle & Donate Marketplace</h1>
+            <p>Give your items a second life and make a positive impact on the environment</p>
+            <div class="hero-buttons">
+                <a href="#recycle" class="primary-btn"><i class="fas fa-recycle"></i> Recycle Items</a>
+                <a href="#donate" class="secondary-btn"><i class="fas fa-hand-holding-heart"></i> Donate Items</a>
+            </div>
+            <div class="eco-impact">
+                <span><i class="fas fa-tree"></i> 5,000+ Trees Saved</span>
+                <span><i class="fas fa-users"></i> 10,000+ Items Recycled</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Navigation -->
+    <section class="category-nav">
+        <div class="category-container">
+            <a href="#books" class="category-item active">
+                <i class="fas fa-book"></i>
+                <span>Books</span>
+                <small>1,234 items</small>
+            </a>
+            <a href="#clothes" class="category-item">
+                <i class="fas fa-tshirt"></i>
+                <span>Clothes</span>
+                <small>2,567 items</small>
+            </a>
+            <a href="#electronics" class="category-item">
+                <i class="fas fa-laptop"></i>
+                <span>Electronics</span>
+                <small>890 items</small>
+            </a>
+            <a href="#donations" class="category-item">
+                <i class="fas fa-hand-holding-heart"></i>
+                <span>Donations</span>
+                <small>456 items</small>
+            </a>
+        </div>
+    </section>
+
+    <!-- Quick Actions -->
+    <section class="quick-actions">
+        <div class="action-container">
+            <div class="action-card">
+                <i class="fas fa-camera"></i>
+                <h3>Scan & List</h3>
+                <p>Quickly list your items for recycling</p>
+            </div>
+            <div class="action-card">
+                <i class="fas fa-truck"></i>
+                <h3>Schedule Pickup</h3>
+                <p>Free pickup for bulk items</p>
+            </div>
+            <div class="action-card">
+                <i class="fas fa-coins"></i>
+                <h3>Earn Points</h3>
+                <p>Get rewards for recycling</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Items -->
+    <section class="featured-items">
+        <div class="section-header">
+            <h2>Items for Recycling & Donation</h2>
+            <div class="filter-sort">
+                <select class="filter-select">
+                    <option value="all">All Categories</option>
+                    <option value="recycle">For Recycling</option>
+                    <option value="donate">For Donation</option>
+                    <option value="exchange">For Exchange</option>
+                </select>
+                <select class="location-select">
+                    <option value="nearby">Nearby First</option>
+                    <option value="citywide">Citywide</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="items-grid">
+            <!-- Book Recycling Item -->
+            <div class="item-card" data-aos="fade-up">
+                <div class="item-badge eco">♻️ Recyclable</div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROPbm1fQ20G8oNJI_oXH-xN53_EHk-TQRyLw&s" alt="Books for Recycling">
+                <div class="item-details">
+                    <span class="item-category">Books</span>
+                    <h3>Textbook Collection</h3>
+                    <p class="item-description">15 university textbooks for recycling</p>
+                    <div class="eco-stats">
+                        <span><i class="fas fa-tree"></i> Saves 2 trees</span>
+                        <span><i class="fas fa-water"></i> Saves 1000L water</span>
+                    </div>
+                    <div class="item-actions">
+                        <button class="recycle-btn">Schedule Pickup</button>
+                        <button class="info-btn"><i class="fas fa-info-circle"></i></button>
+                    </div>
+                </div>
+            </div><br>
+
+            <!-- Clothing Donation Item -->
+            <div class="item-card" data-aos="fade-up">
+                <div class="item-badge donation">❤️ Donation</div>
+                <img src="https://imgmediagumlet.lbb.in/media/2023/12/6569852c7f06dd4fb6e9d55f_1701414188238.jpg" alt="Clothes for Donation">
+                <div class="item-details">
+                    <span class="item-category">Clothes</span>
+                    <h3>Winter Clothing Bundle</h3>
+                    <p class="item-description">Gently used winter clothes for donation</p>
+                    <div class="donation-impact">
+                        <span><i class="fas fa-heart"></i> Helps families in need</span>
+                        <span><i class="fas fa-medal"></i> Earn 50 green points</span>
+                    </div>
+                    <div class="item-actions">
+                        <button class="donate-btn">Arrange Donation</button>
+                        <button class="info-btn"><i class="fas fa-info-circle"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Electronics Recycling Item -->
+            <div class="item-card" data-aos="fade-up">
+                <div class="item-badge refurbish">🔧 Refurbish</div>
+                <img src="https://sadoffelectronicsrecycling.com/wp-content/uploads/2022/08/Person-holding-a-box-of-electronics-for-donation-with-the-Sadoff-logo.png" alt="Electronics for Recycling">
+                <div class="item-details">
+                    <span class="item-category">Electronics</span>
+                    <h3>Laptop for Refurbishment</h3>
+                    <p class="item-description">Working laptop for school program</p>
+                    <div class="eco-stats">
+                        <span><i class="fas fa-laptop"></i> Helps student education</span>
+                        <span><i class="fas fa-award"></i> Earn 100 green points</span>
+                    </div>
+                    <div class="item-actions">
+                        <button class="recycle-btn">Schedule Pickup</button>
+                        <button class="info-btn"><i class="fas fa-info-circle"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Tracker -->
+    <section class="impact-tracker">
+        <h2>Community Impact</h2>
+        <div class="impact-grid">
+            <div class="impact-card">
+                <i class="fas fa-book"></i>
+                <h3>Books</h3>
+                <div class="impact-stats">
+                    <span>50,000+ Recycled</span>
+                    <span>100+ Trees Saved</span>
+                </div>
+            </div>
+            <div class="impact-card">
+                <i class="fas fa-tshirt"></i>
+                <h3>Clothes</h3>
+                <div class="impact-stats">
+                    <span>10,000+ Donated</span>
+                    <span>5,000+ Beneficiaries</span>
+                </div>
+            </div>
+            <div class="impact-card">
+                <i class="fas fa-laptop"></i>
+                <h3>Electronics</h3>
+                <div class="impact-stats">
+                    <span>2,000+ Recycled</span>
+                    <span>500+ Refurbished</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <h2>How to Recycle & Donate</h2>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>List Your Items</h3>
+                <p>Take photos and describe your items</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Choose Method</h3>
+                <p>Select recycling or donation</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Schedule Pickup</h3>
+                <p>We'll collect from your location</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Track Impact</h3>
+                <p>See your environmental contribution</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Footer content remains the same -->
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/marketplace.js"></script>
+    <script>
+    function handleLogout() {
+        fetch('http://localhost:5000/api/logout', {
+            method: 'GET',
+            credentials: 'include'
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Clear any stored session/local storage data
+            localStorage.removeItem('user');
+            sessionStorage.removeItem('user');
+            
+            // Update UI to show logged out state
+            document.body.classList.remove('logged-in');
+            document.querySelector('.user-section').style.display = 'none';
+            document.querySelector('.auth-buttons').style.display = 'flex';
+            
+            window.location.href = 'login.html';
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error logging out. Please try again.');
+        });
+    }
+
+    // Check login status on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (user) {
+            document.body.classList.add('logged-in');
+            document.getElementById('userEmail').textContent = user.email;
+            document.querySelector('.user-section').style.display = 'flex';
+            document.querySelector('.auth-buttons').style.display = 'none';
+        } else {
+            document.querySelector('.user-section').style.display = 'none';
+            document.querySelector('.auth-buttons').style.display = 'flex';
+        }
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - RecycleConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="Stylesheet" type="text/css" href="Style.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <!-- Top Bar -->
+        <div class="header-top">
+            <div class="header-top-content">
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i> info@recycleconnect.com
+                    <i class="fas fa-phone ml-3"></i> +1 234 567 890
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header -->
+        <div class="main-header">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-recycle"></i>
+                    <h1>RecycleConnect</h1>
+                </a>
+
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#projects">Projects</a></li>
+                        <li><a href="index.html#marketplace">Marketplace</a></li>
+                        <li><a href="index.html#community">Community</a></li>
+                        <li><a href="about.html" class="active">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="user-actions">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="auth-buttons">
+                        <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+                        <button class="signup-btn" onclick="window.location.href='signup.html'">Sign Up</button>
+                    </div>
+                    <div class="user-section">
+                        <div class="user-status">
+                            <i class="fas fa-user-circle"></i>
+                            <span id="userEmail"></span>
+                        </div>
+                        <button class="logout-btn" onclick="handleLogout()">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>About RecycleConnect</h1>
+            <p>Building a sustainable future through community-driven recycling initiatives</p>
+        </div>
+    </section><br>
+
+    <!-- Our Story Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>RecycleConnect was founded in 2024 with a simple yet powerful mission: to make recycling and sustainable living accessible to everyone. What started as a small community initiative has grown into a global platform connecting environmentally conscious individuals and organizations.</p>
+                    <p>Our platform serves as a bridge between those who want to contribute to a sustainable future and those who can help make it happen. Whether through donations, purchases, or community projects, every action on RecycleConnect contributes to our shared goal of environmental preservation.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://www.forgerecycling.co.uk/blog/wp-content/uploads/2022/11/bigstock-Cardboard-Donation-Box-Full-Of-431138237-1-825x510.jpg" alt="RecycleConnect Story">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <h2>Our Values</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Sustainability</h3>
+                    <p>We prioritize environmental impact in everything we do.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Community</h3>
+                    <p>Building stronger communities through collaborative recycling efforts.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovation</h3>
+                    <p>Constantly improving our solutions with cutting-edge technology.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-heart"></i>
+                    <h3>Responsibility</h3>
+                    <p>Taking action for a better tomorrow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="mission-vision-content">
+                <div class="mission">
+                    <h2>Our Mission</h2>
+                    <p>To create a sustainable future by connecting communities through innovative recycling solutions and promoting environmental consciousness.</p>
+                </div>
+                <div class="vision">
+                    <h2>Our Vision</h2>
+                    <p>A world where recycling is accessible to all, and where sustainable practices are integrated into everyday life.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2>Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://icons.veryicon.com/png/o/miscellaneous/effevo/member-50.png" alt="Tushar Pawar">
+                    <h3>Tushar Pawar</h3>
+                    <p>Member 1</p>
+                    <div class="member-social">
+                        <a href="https://www.linkedin.com/in/tushar-pawar-97a563292/"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="https://icons.veryicon.com/png/o/miscellaneous/effevo/member-50.png" alt="Aaryan Dongardive">
+                    <h3>Aaryan Dongardive</h3>
+                    <p>Member 2</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="https://icons.veryicon.com/png/o/miscellaneous/effevo/member-50.png" alt="Sarang Gaikwad">
+                    <h3>Sarang Gaikwad</h3>
+                    <p>Member 3</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="https://icons.veryicon.com/png/o/miscellaneous/effevo/member-50.png" alt="Nakul">
+                    <h3>Nakul</h3>
+                    <p>Member 4</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact-section">
+        <div class="container">
+            <h2>Our Impact</h2>
+            <div class="impact-stats">
+                <div class="stat-item">
+                    <div class="stat-number">50K+</div>
+                    <div class="stat-label">Active Users</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100K+</div>
+                    <div class="stat-label">Items Recycled</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Communities Served</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5K+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>RecycleConnect</h3>
+                <p>Making recycling accessible and rewarding for everyone.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#marketplace">Marketplace</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="contact.html">Help Center</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for updates and tips.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit" class="cta-button">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 RecycleConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+    function handleLogout() {
+        fetch('http://localhost:5000/api/logout', {
+            method: 'GET',
+            credentials: 'include'
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Clear any stored session/local storage data
+            localStorage.removeItem('user');
+            sessionStorage.removeItem('user');
+            
+            // Update UI to show logged out state
+            document.body.classList.remove('logged-in');
+            document.querySelector('.user-section').style.display = 'none';
+            document.querySelector('.auth-buttons').style.display = 'flex';
+            
+            window.location.href = 'login.html';
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error logging out. Please try again.');
+        });
+    }
+
+    // Check login status on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (user) {
+            document.body.classList.add('logged-in');
+            document.getElementById('userEmail').textContent = user.email;
+            document.querySelector('.user-section').style.display = 'flex';
+            document.querySelector('.auth-buttons').style.display = 'none';
+        } else {
+            document.querySelector('.user-section').style.display = 'none';
+            document.querySelector('.auth-buttons').style.display = 'flex';
+        }
+    });
+    </script>
+</body>
+</html>

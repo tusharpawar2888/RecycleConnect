@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - RecycleConnect</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <!-- Top Bar -->
+        <div class="header-top">
+            <div class="header-top-content">
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i> info@recycleconnect.com
+                    <i class="fas fa-phone ml-3"></i> +1 234 567 890
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header -->
+        <div class="main-header">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-recycle"></i>
+                    <h1>RecycleConnect</h1>
+                </a>
+
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html" class="active">Projects</a></li>
+                        <li><a href="Marketplace.html">Marketplace</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="user-actions">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="auth-buttons">
+                        <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+                        <button class="signup-btn" onclick="window.location.href='signup.html'">Sign Up</button>
+                    </div>
+                    <div class="user-section">
+                        <div class="user-status">
+                            <i class="fas fa-user-circle"></i>
+                            <span id="userEmail"></span>
+                        </div>
+                        <button class="logout-btn" onclick="handleLogout()">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <header class="projects-hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Our Impact Projects</h1>
+            <p>Discover how we're making a difference in environmental sustainability</p>
+        </div>
+    </header>
+
+    <!-- Featured Projects -->
+    <section class="featured-projects">
+        <h2 class="section-title" data-aos="fade-up">Our Recycling Initiatives</h2>
+
+        <div class="projects-grid">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1530538987395-032d1800fdd4" alt="Books Recycling">
+                </div>
+                <div class="project-content">
+                    <h3>Book Recycling & Sharing</h3>
+                    <p>Give books a second life through our community book exchange and recycling program.</p>
+                    <div class="project-features">
+                        <div class="feature"><i class="fas fa-book"></i> Book Donation</div>
+                        <div class="feature"><i class="fas fa-exchange-alt"></i> Book Exchange</div>
+                        <div class="feature"><i class="fas fa-school"></i> School Programs</div>
+                    </div>
+                    <div class="project-stats">
+                        <span><i class="fas fa-book-reader"></i> 50,000+ books shared</span>
+                        <span><i class="fas fa-users"></i> 5,000+ participants</span>
+                    </div>
+                    <a href="#marketplace/books" class="project-btn">Join Initiative</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f" alt="Clothes Recycling">
+                </div>
+                <div class="project-content">
+                    <h3>Sustainable Fashion</h3>
+                    <p>Reduce textile waste through our clothing recycling and donation platform.</p>
+                    <div class="project-features">
+                        <div class="feature"><i class="fas fa-tshirt"></i> Clothes Collection</div>
+                        <div class="feature"><i class="fas fa-hand-holding-heart"></i> Charity Donations</div>
+                        <div class="feature"><i class="fas fa-store"></i> Thrift Store Network</div>
+                    </div>
+                    <div class="project-stats">
+                        <span><i class="fas fa-recycle"></i> 10+ tons recycled</span>
+                        <span><i class="fas fa-building"></i> 50+ partner stores</span>
+                    </div>
+                    <a href="#marketplace/clothes" class="project-btn">Participate Now</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1526406915894-7bcd65f60845" alt="Electronics Recycling">
+                </div>
+                <div class="project-content">
+                    <h3>E-Waste Solutions</h3>
+                    <p>Responsible electronics recycling and refurbishment program for a cleaner future.</p>
+                    <div class="project-features">
+                        <div class="feature"><i class="fas fa-laptop"></i> Device Collection</div>
+                        <div class="feature"><i class="fas fa-tools"></i> Refurbishment</div>
+                        <div class="feature"><i class="fas fa-graduation-cap"></i> Digital Access</div>
+                    </div>
+                    <div class="project-stats">
+                        <span><i class="fas fa-mobile-alt"></i> 15,000+ devices recycled</span>
+                        <span><i class="fas fa-school"></i> 100+ schools supported</span>
+                    </div>
+                    <a href="#marketplace/electronics" class="project-btn">Recycle Electronics</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Token System -->
+    <section class="token-system">
+        <div class="token-content" data-aos="fade-up">
+            <h2>Earn Green Tokens</h2>
+            <p>Get rewarded for your sustainable actions! Earn tokens for every item you recycle or donate.</p>
+            <div class="token-benefits">
+                <div class="benefit-card">
+                    <i class="fas fa-gift"></i>
+                    <h3>Rewards</h3>
+                    <p>Redeem tokens for eco-friendly products</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Impact Tracking</h3>
+                    <p>Monitor your environmental contribution</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-medal"></i>
+                    <h3>Community Status</h3>
+                    <p>Earn badges and recognition</p>
+                </div>
+            </div>
+            <a href="#token-system" class="token-btn">Learn About Tokens</a>
+        </div>
+    </section>
+
+    <!-- Business Partners -->
+    <section class="business-partners">
+        <h2 class="section-title" data-aos="fade-up">Our Recycling Partners</h2>
+        <div class="partners-grid">
+            <div class="partner-card" data-aos="fade-up">
+                <i class="fas fa-store-alt"></i>
+                <h3>Local Thrift Stores</h3>
+                <p>Network of certified second-hand retailers</p>
+            </div>
+            <div class="partner-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-industry"></i>
+                <h3>Recycling Centers</h3>
+                <p>Professional recycling facilities</p>
+            </div>
+            <div class="partner-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-hands-helping"></i>
+                <h3>Charity Organizations</h3>
+                <p>Supporting communities in need</p>
+            </div>
+            <div class="partner-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-school"></i>
+                <h3>Educational Institutions</h3>
+                <p>Promoting sustainability education</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Counter -->
+    <section class="impact-counter">
+        <div class="counter-container">
+            <div class="counter-item" data-aos="zoom-in">
+                <i class="fas fa-tree"></i>
+                <div class="counter" data-target="5000">0</div>
+                <h3>Trees Planted</h3>
+            </div>
+            <div class="counter-item" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fas fa-users"></i>
+                <div class="counter" data-target="10000">0</div>
+                <h3>Community Members</h3>
+            </div>
+            <div class="counter-item" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fas fa-globe-americas"></i>
+                <div class="counter" data-target="50">0</div>
+                <h3>Cities Impacted</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved -->
+    <section class="get-involved">
+        <div class="involved-content" data-aos="fade-up">
+            <h2>Get Involved</h2>
+            <p>Join our mission to create a sustainable future. Every action counts!</p>
+            <div class="action-buttons">
+                <a href="#" class="primary-btn">Start a Project</a>
+                <a href="#" class="secondary-btn">Volunteer</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>RecycleConnect</h3>
+                <p>Making the world cleaner, one project at a time.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 RecycleConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/projects.js"></script>
+    <script>
+    function handleLogout() {
+        fetch('http://localhost:5000/api/logout', {
+            method: 'GET',
+            credentials: 'include'
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Clear any stored session/local storage data
+            localStorage.removeItem('user');
+            sessionStorage.removeItem('user');
+            
+            // Update UI to show logged out state
+            document.body.classList.remove('logged-in');
+            document.querySelector('.user-section').style.display = 'none';
+            document.querySelector('.auth-buttons').style.display = 'flex';
+            
+            window.location.href = 'login.html';
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error logging out. Please try again.');
+        });
+    }
+
+    // Check login status on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (user) {
+            document.body.classList.add('logged-in');
+            document.getElementById('userEmail').textContent = user.email;
+            document.querySelector('.user-section').style.display = 'flex';
+            document.querySelector('.auth-buttons').style.display = 'none';
+        } else {
+            document.querySelector('.user-section').style.display = 'none';
+            document.querySelector('.auth-buttons').style.display = 'flex';
+        }
+    });
+    </script>
+</body>
+</html>

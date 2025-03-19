@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecycleConnect - Sustainable Community Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="Stylesheet" type="text/css" href="Style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <!-- Top Bar -->
+        <div class="header-top">
+            <div class="header-top-content">
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i> info@recycleconnect.com
+                    <i class="fas fa-phone ml-3"></i> +1 234 567 890
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header -->
+        <div class="main-header">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <i class="fas fa-recycle"></i>
+                    <h1>RecycleConnect</h1>
+                </a>
+
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="Marketplace.html">Marketplace</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="user-actions">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="auth-buttons">
+                        <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+                        <button class="signup-btn" onclick="window.location.href='signup.html'">Sign Up</button>
+                    </div>
+                    <div class="user-section">
+                        <div class="user-status">
+                            <i class="fas fa-user-circle"></i>
+                            <span id="userEmail"></span>
+                        </div>
+                        <button class="logout-btn" onclick="handleLogout()">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Make a Sustainable Impact</h2>
+            <p>Join our community of change-makers and help create a better world through sustainable practices and meaningful donations.</p>
+            <div class="hero-buttons">
+                <a href="#donate" class="hero-btn primary-btn">Start Donating</a>
+                <a href="#learn" class="hero-btn secondary-btn">Learn More</a>
+            </div>
+
+            <div class="impact-stats">
+                <div class="stat-item">
+                    <div class="stat-number">10K+</div>
+                    <div class="stat-label">Active Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50K+</div>
+                    <div class="stat-label">Community Members</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">$2M+</div>
+                    <div class="stat-label">Impact Generated</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="section">
+        <div class="section-title">
+            <h2>Featured Projects</h2>
+            <p>Discover impactful initiatives that are making a difference in communities around the world.</p>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b" alt="Project Image">
+                </div>
+                <div class="project-content">
+                    <div class="project-category">Environmental</div>
+                    <h3 class="project-title">Ocean Cleanup Initiative</h3>
+                    <p class="project-description">Help us remove plastic waste from our oceans and protect marine life.</p>
+                    <div class="project-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+                    <div class="project-stats">
+                        <span>$75,000 raised</span>
+                        <span>75% complete</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b" alt="Project Image">
+                </div>
+                <div class="project-content">
+                    <div class="project-category">Community</div>
+                    <h3 class="project-title">Local Recycling Program</h3>
+                    <p class="project-description">Support our community recycling initiative for a cleaner neighborhood.</p>
+                    <div class="project-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+                    <div class="project-stats">
+                        <span>$45,000 raised</span>
+                        <span>60% complete</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b" alt="Project Image">
+                </div>
+                <div class="project-content">
+                    <div class="project-category">Education</div>
+                    <h3 class="project-title">Sustainability Workshop</h3>
+                    <p class="project-description">Educating communities about sustainable living practices.</p>
+                    <div class="project-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+                    <div class="project-stats">
+                        <span>$30,000 raised</span>
+                        <span>40% complete</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Make a Difference?</h2>
+            <p>Join thousands of others who are already making an impact through RecycleConnect.</p>
+            <div class="cta-buttons">
+                <a href="#join" class="hero-btn primary-btn">Join Now</a>
+                <a href="#contact" class="hero-btn secondary-btn">Contact Us</a>
+            </div>
+        </div>
+    </section><br>
+    <!-- Problem Statement Section -->
+<section class="problem-statement">
+    <div class="container">
+        <h2 class="section-title">Problem Statement</h2>
+        <p class="problem-description">
+            Many reusable items such as old books, clothes, and electronics go unused or end up in landfills, leading to resource wastage and environmental pollution.
+            At the same time, individuals and businesses seeking affordable second-hand goods or recyclable materials often lack a centralized platform to connect with potential sellers or donors.
+            This gap results in missed opportunities for reuse, recycling, and cost savings, while also hindering sustainability efforts.
+        </p>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">Key Features of RecycleConnect</h2>
+        <div class="feature-list">
+            <div class="feature-item">
+                <i class="fa fa-refresh"></i>
+                <h3>Encourage Recycling</h3>
+                <p>Allow users to donate or sell items such as books, clothes, and electronics.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa fa-share-alt"></i>
+                <h3>Promote Sharing and Reuse</h3>
+                <p>Enable users to request or purchase pre-owned items, reducing the demand for new products.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa fa-industry"></i>
+                <h3>Support Firms and Businesses</h3>
+                <p>Facilitate connections with companies that buy second-hand goods like clothes or recyclables.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa fa-cogs"></i>
+                <h3>Optimize Logistics</h3>
+                <p>Use data analysis to efficiently match buyers, sellers, and recyclers based on proximity and item type.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa fa-trophy"></i>
+                <h3>Track and Reward Contributions</h3>
+                <p>Provide insights into environmental impact and introduce a token system to incentivize participation.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Donation/Sell Form Section -->
+<section class="donate-sell">
+    <div class="container">
+        <h2 class="section-title">Donate or Sell Your Items</h2>
+        <form id="donate-sell-form">
+            <div class="form-group">
+                <label for="item-name">Item Name</label>
+                <input type="text" id="item-name" name="item-name" placeholder="Enter item name" required>
+            </div>
+            <div class="form-group">
+                <label for="item-description">Item Description</label>
+                <textarea id="item-description" name="item-description" placeholder="Describe your item" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="item-category">Category</label>
+                <select id="item-category" name="item-category">
+                    <option value="books">Books</option>
+                    <option value="clothes">Clothes</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="furniture">Furniture</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item-condition">Condition</label>
+                <select id="item-condition" name="item-condition">
+                    <option value="new">New</option>
+                    <option value="used">Used</option>
+                    <option value="damaged">Damaged</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item-image">Item Image</label>
+                <input type="file" id="item-image" name="item-image" accept="image/*">
+            </div>
+            <div class="form-group">
+                <label for="item-price">Price (for Sale Only)</label>
+                <input type="number" id="item-price" name="item-price" placeholder="Price in INR" min="0">
+            </div>
+            <div class="form-group">
+                <label for="item-action">Action</label>
+                <select id="item-action" name="item-action">
+                    <option value="donate">Donate</option>
+                    <option value="sell">Sell</option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+<!-- Items for Sale/Donation Section -->
+<section class="items-list">
+    <div class="container">
+        <h2 class="section-title">Available Items</h2>
+        <div class="items-grid">
+            <!-- Books Section -->
+            <div class="item-card">
+                <div class="item-image">
+                    <img src="https://m.media-amazon.com/images/I/51HRDCYNQ5S._SX342_SY445_.jpg" alt="Classic Literature Books">
+                </div>
+                <div class="item-details">
+                    <h3>Classic Literature Collection</h3>
+                    <p>Vintage classics including Shakespeare, Jane Austen, and Charles Dickens.</p>
+                    <p><strong>Price: ₹300/book</strong></p>
+                    <button class="purchase-btn">Purchase</button>
+                    <button class="donate-btn">Donate</button>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-image">
+                    <img src="https://apollo.olx.in/v1/files/7xpp31ypczxf3-IN/image;s=780x0;q=60" alt="Academic Textbooks">
+                </div>
+                <div class="item-details">
+                    <h3>Engineering Textbooks</h3>
+                    <p>Previous year engineering and computer science textbooks.</p>
+                    <p><strong>Price: ₹500/book</strong></p>
+                    <button class="purchase-btn">Purchase</button>
+                    <button class="donate-btn">Donate</button>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-image">
+                    <img src="https://m.media-amazon.com/images/I/81EFD7qePKL._SL1500_.jpg" alt="Children Books">
+                </div>
+                <div class="item-details">
+                    <h3>Children's Book Bundle</h3>
+                    <p>Collection of story books and educational materials for kids.</p>
+                    <p><strong>Price: ₹250/bundle</strong></p>
+                    <button class="purchase-btn">Purchase</button>
+                    <button class="donate-btn">Donate</button>
+                </div>
+            </div>
+
+            <!-- Clothing Section -->
+            <div class="item-card">
+                <div class="item-image">
+                    <img src="https://www.realsimple.com/thmb/LEBdHFtVUQg5NCNxScpG6qKAIhA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/reuse-old-clothes-gettyimages-1316931901-e574c71950ed47c7a9bcce3d1c7911a0.jpg" alt="Men's Formal Wear">
+                </div>
+                <div class="item-details">
+                    <h3>Old Clothes</h3>
+                    <p>Gently used  shirts and trousers, sizes M-XL.</p>
+                    <p><strong>Price: ₹600/piece</strong></p>
+                    <button class="purchase-btn">Purchase</button>
+                    <button class="donate-btn">Donate</button>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-image">
+                    <img src="https://content.jdmagicbox.com/v2/comp/mumbai/c8/022pxx22.xx22.180122110220.l6c8/catalogue/juna-kapadawala-mulund-east-mumbai-second-hand-cloth-buyers-wzeas.jpg" alt="Women's Clothing">
+                </div>
+                <div class="item-details">
+                    <h3>Second Hand Cloth </h3>
+                    <p>Trendy tops, dresses, and jeans in excellent condition.</p>
+                    <p><strong>Price: ₹100-800/piece</strong></p>
+                    <button class="purchase-btn">Purchase</button>
+                    <button class="donate-btn">Donate</button>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-image">
+                    <img src="https://i.ytimg.com/vi/17U7joM9AAQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAW2SL0Jmn9zIkV6carWAzYCmjvjQ" alt="Traditional Wear">
+                </div>
+                <div class="item-details">
+                    <h3>Traditional Indian Wear</h3>
+                    <p>Sarees, Kurtas, and ethnic wear for special occasions.</p>
+                    <p><strong>Price: ₹100-1500/piece</strong></p>
+                    <button class="purchase-btn">Purchase</button>
+                    <button class="donate-btn">Donate</button>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSum8Ujj60qagrq64s-PARbJssjnMTwgSxwOQ&s" alt="Kids Clothing">
+                </div>
+                <div class="item-details">
+                    <h3>Children's Clothing Bundle</h3>
+                    <p>Mixed clothing items for ages 2-10 years.</p>
+                    <p><strong>Price: ₹300/bundle</strong></p>
+                    <button class="purchase-btn">Purchase</button>
+                    <button class="donate-btn">Donate</button>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-image">
+                    <img src="https://content.easyliveauction.com/auctions/images_lots/8D510D2A2B39D257CB448C20F0F00D39_ger01/1100565468_PREVIEW.JPG" alt="Vintage Collection">
+                </div>
+                <div class="item-details">
+                    <h3>Vintage Magazine Collection</h3>
+                    <p>Rare magazines and comics from 1980s-1990s.</p>
+                    <p><strong>Price: ₹400/set</strong></p>
+                    <button class="purchase-btn">Purchase</button>
+                    <button class="donate-btn">Donate</button>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-RvaHBAVFimo9W01LgAUNM4ywSKD7Be9s3mi0qbIH-3_308ctHz6smz6TJCEXmEtMI-Y&usqp=CAU" alt="Winter Wear">
+                </div>
+                <div class="item-details">
+                    <h3>Winter Wear Collection</h3>
+                    <p>Jackets, sweaters, and warm clothing items.</p>
+                    <p><strong>Price: ₹200-1200/piece</strong></p>
+                    <button class="purchase-btn">Purchase</button>
+                    <button class="donate-btn">Donate</button>
+                </div>
+            </div>
+
+            <!-- Home Appliance Item -->
+            <div class="item-card">
+                <div class="item-image">
+                    <img src="https://teja8.kuikr.com/i5/20250204/Brand-New-Juicer-Mixer-Grinder-VB201705171774173-ak_LWBP88686994-1738660490.jpeg" alt="Blender">
+                </div>
+                <div class="item-details">
+                    <h3>Kitchen Blender</h3>
+                    <p>Functional blender, perfect for small households.</p>
+                    <p><strong>Price: ₹500</strong></p>
+                    <button class="purchase-btn">Purchase</button>
+                    <button class="donate-btn">Donate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<button id="backToTop" title="Go to top">↑</button>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About RecycleConnect</h3>
+                <p>Connecting communities for a sustainable future through innovative recycling and donation solutions.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#marketplace">Marketplace</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Stay updated with our latest projects and initiatives.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 RecycleConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+    <script src="script.js"></script>
+    <script>
+    function handleLogout() {
+        fetch('http://localhost:5000/api/logout', {
+            method: 'GET',
+            credentials: 'include'
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Clear any stored session/local storage data
+            localStorage.removeItem('user');
+            sessionStorage.removeItem('user');
+            
+            // Update UI to show logged out state
+            document.body.classList.remove('logged-in');
+            document.querySelector('.user-section').style.display = 'none';
+            document.querySelector('.auth-buttons').style.display = 'flex';
+            
+            window.location.href = 'login.html';
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error logging out. Please try again.');
+        });
+    }
+
+    // Check login status on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (user) {
+            document.body.classList.add('logged-in');
+            document.getElementById('userEmail').textContent = user.email;
+            document.querySelector('.user-section').style.display = 'flex';
+            document.querySelector('.auth-buttons').style.display = 'none';
+        } else {
+            document.querySelector('.user-section').style.display = 'none';
+            document.querySelector('.auth-buttons').style.display = 'flex';
+        }
+    });
+    </script>
+</body>
+</html>
